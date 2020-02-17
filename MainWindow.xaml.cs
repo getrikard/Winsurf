@@ -1,19 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Winsurf
 {
@@ -61,6 +48,13 @@ namespace Winsurf
         private void Navigate(string url)
         {
             UrlField.Visibility = Visibility.Hidden;
+
+            if (url == "") return;
+            if (!url.StartsWith("http://") || !url.StartsWith("http://"))
+            {
+                url = $"http://{url}";
+            }
+
             try
             {
                 MainWeb.Navigate(url);

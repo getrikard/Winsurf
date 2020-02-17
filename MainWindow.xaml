@@ -8,7 +8,7 @@
         Title="Winsurf" Icon="rikard.jpg"
         FontFamily="Mo Mono">
     <Grid>
-        <WebBrowser x:Name="MainWeb" Margin="0,23,0,0"/>
+        <WebBrowser x:Name="MainWeb" Margin="0,16,0,0"/>
         <TextBox x:Name="UrlField" Margin="0,0,0,481" TextWrapping="Wrap" Text="" Visibility="Hidden" />
 
     </Grid>
