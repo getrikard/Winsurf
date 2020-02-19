@@ -50,7 +50,7 @@ namespace Winsurf
             UrlField.Visibility = Visibility.Hidden;
 
             if (url == "") return;
-            if (!url.StartsWith("http://") || !url.StartsWith("http://"))
+            if (!url.StartsWith("http://") || !url.StartsWith("https://"))
             {
                 url = $"http://{url}";
             }
